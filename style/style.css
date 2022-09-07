@@ -1,0 +1,314 @@
+:root {
+    background-color: lightgrey;
+}
+
+body {
+    width: 85%;
+    background-color: #F6F6F6;
+    background-image: url("../img/corps-background.png");
+    color: black;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: 'Lato', sans-serif;
+    border: 2px solid #567889;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 10px 10px 10px -6px rgba(86,120,137,1);
+}
+
+section {
+    min-height: 270px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+    }
+
+    section header {
+        text-align: center;
+    }
+
+h1 {
+    text-shadow: 1px 1px 3px white;
+    font-size: 3em;
+    padding: 5px;
+    margin: 0;
+}
+
+h2 {
+    text-shadow: 1px 1px 3px white;
+    font-size: 2em;
+    padding: 5px;
+    margin: 0;
+}
+
+h3 {
+    text-shadow: 1px 1px 3px white;
+    font-size: 1.5em;
+    padding: 5px;
+    padding-top: 15px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+h4 {
+    text-shadow: 1px 1px 3px white;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h5 {
+    text-shadow: 1px 1px 3px white;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 3px;
+    margin-bottom: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: silver;
+}
+
+    a:hover {
+        color: yellow;
+    }
+
+    a:active {
+        color: white;
+    }
+
+em {
+    font-size: larger;
+    font-stretch: expanded;
+}
+
+#naglowek {
+    text-align: center;
+    border-bottom: solid 2px #567889;
+    padding-bottom: 5px;
+    color: black;
+}
+
+#stopka {
+    text-align: center;
+    padding: 15px;
+    background: rgba(88, 81, 81, 0.10);
+    color: #06092b;
+    margin-top: 20px;
+}
+
+    #stopka img {
+        margin-left: 10px;
+    }
+
+.st-box-left {
+    float: left;
+    margin-left: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+.st-box-right {
+    float: right;
+    margin-right: 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+/* formatowanie g³ównej zawartoœci strony */
+
+.tabela_wynikow {
+    background-color: rgba(88, 81, 81, 0.20);
+    padding: 20px;
+    word-spacing: 5px;
+    text-align: center;
+    border: 1px solid;
+    font-size: 2.5em;
+}
+
+.tabela_wiersz_tytulowy {
+    background-color: rgba(8, 47, 3, 0.6);
+}
+
+.tabela_wiersz {
+    background-color: rgba(8, 47, 3, 0.3);
+}
+
+.tabela_wiersz_komentarz {
+    background-color: rgba(8, 47, 3, 0.3);
+    font-size: 0.5em;
+}
+
+
+.tabela_wiersz_suma {
+    background-color: rgb(8, 47, 3);
+    color: white;
+}
+
+.wynik_bitwy_opisowy {
+    font-size: 3em;
+    font-weight: 900;
+    color: red;
+    text-align: center;
+    padding: 30px;
+}
+.zawartosc {
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+.image_center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.polprzezroczysta_jasna_ramka {
+    background-color: rgba(88, 81, 81, 0.60);
+    padding: 15px;
+    margin: 5px;
+
+}
+
+.ramka_gracza_A {
+    /*background-image: url("background-bottom.png");*/
+    background: rgba(255, 0, 0, 0.05);
+    padding: 15px;
+    margin: 5px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 2px solid #370505;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 10px 10px 10px -6px rgba(86,120,137,1);
+}
+
+.ramka_gracza_B {
+    background: rgba(0, 0, 255, 0.05);
+    padding: 15px;
+    margin: 5px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 2px solid #06092b;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 10px 10px 10px -6px rgba(86,120,137,1);
+}
+
+.ramka_wyniki {
+    background: rgba(30, 100, 0, 0.05);
+    padding: 15px;
+    margin: 5px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 2px solid #05310e;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 10px 10px 10px -6px rgba(86,120,137,1);
+}
+
+.wyswietlane_wartosci {
+    font-weight: bold;
+    color: darkblue;
+}
+
+/* formatowanie przycisku */
+
+.sekcja_przycisku {
+    text-align: center;
+}
+
+.przycisk_przeliczenia {
+    background: url("../img/hq-logo.png");
+    /*background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+    background-color: #768d87;*/
+    border-radius: 11px;
+    border: 3px solid rgb(88, 81, 81);
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 30px 200px;
+    text-decoration: none;
+    text-shadow: 0px -1px 0px #5b6178;
+}
+
+    .przycisk_przeliczenia:hover {
+        /*
+        background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+        */
+        background-color: rgba(88, 81, 81, 0.20);
+        border: 5px solid rgb(88, 81, 81);
+    }
+
+    .przycisk_przeliczenia:active {
+        position: relative;
+        top: 1px;
+    }
+
+/* formatowanie slider'ów */
+
+
+.slider {
+    -webkit-appearance: none;
+    width: 90%;
+    height: 10px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out;
+}
+
+    .slider:hover {
+        opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 30px;
+        height: 35px;
+        border: 0;
+        background: url("../img/ikona_suwaka.png");
+        cursor: pointer;
+    }
+
+
+/* formatowanie radio */
+
+.radio_punkty {
+    padding: 20px;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 20px;
+    height: 20px;
+}
+
+
+/* formatwanie checkbox */
+.checkbox_punkty {
+    padding: 20px;
+}
+
+input[type=checkbox] {
+    border: 0px;
+    width: 20px;
+    height: 20px;
+}
+
+.label_checkbox {
+    font-size: 1.4em;
+}

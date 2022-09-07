@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="author" content="Marcin Szymankiewicz" />
+    <title>Kalkulator wyniku bitwy - Bogowie Wojny: Lee</title>
+    <link rel="shortcut icon" href="./ikony/favicon.ico" />
+    <link href="style/style.css" rel="stylesheet" />
+    <!-- <script src="skrypty/skrypty.js" defer></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+
+
+<body>
+    <noscript>Twoja przegladarka nie wspiera technologi JavaScript</noscript>
+
+    <!--nagłówek-->
+    <header id="naglowek">
+        <p>
+            <img src="img/header_pl.png" class="image_center" />
+            <h1>KALKULATOR WYNIKU BITWY</h1>
+        </p>
+    </header>
+
+    <!-- Wprowadzanie danych Gracza A -->
+    <section class="ramka_gracza_A">
+
+        <h1> Gracz A</h1>
+
+        <div>
+
+            <h3>Ilość wystawionych jednostek: <span id="wyswietl_AIloscJednostek" class="wyswietlane_wartosci"></span></h3>
+            <p><input type="range" min="1" max="50" value="25" class="slider" id="slider_AIloscJednostek"></p>
+
+            <h3>Ilość straconych jednostek: <span id="wyswietl_AIloscStraconychJednostek" class="wyswietlane_wartosci"></span></h3>
+            <p><input type="range" min="0" max="50" value="0" class="slider" id="slider_AIloscStraconychJednostek"></p>
+
+
+            <h3>Ilość Twoich jednostek odpechniętych poza pole bitwy: <span id="wyswietl_AIloscOdpechnietychJednostek" class="wyswietlane_wartosci"></span></h3>
+            <p><input type="range" min="0" max="50" value="0" class="slider" id="slider_AIloscOdpechnietychJednostek"></p>
+
+            <h3>Ilość zdobytych punktów strategicznych: <span id="wyswietl_AIloscZdobytychPunktowStrategicznych" class="wyswietlane_wartosci"></span></h3>
+            <p><input type="range" min="0" max="5" value="0" class="slider" id="slider_AIloscZdobytychPunktowStrategicznych"></p>
+
+            <h3>Wybrana taktyka Armii: <span id="wyswietl_ATaktykaArmii" class="wyswietlane_wartosci"></span></h3>
+            <label class="radio_punkty">
+                Ostrożna
+                <input type="radio" checked="checked" name="radio_ATaktykaArmii" value="Ostrozna">
+            </label>
+            <label class="radio_punkty">
+                Neutralna
+                <input type="radio" name="radio_ATaktykaArmii" value="Neutralna">
+            </label>
+            <label class="radio_punkty">
+                Agresywna
+                <input type="radio" name="radio_ATaktykaArmii" value="Agresywna">
+            </label>
+
+            <h3>Osiągnięte cele: <span id="wyswietl_ATaktykaArmii" class="wyswietlane_wartosci"></span></h3>
+            <label class="checkbox_punkty">
+                Kontrola własnej podstawy operacyjnej
+                <input type="checkbox" id="checkbox_AWlasnaPodstawa" name="checkbox_AWlasnaPodstawa">
+            </label><br /><br />
+
+            <label class="checkbox_punkty">
+                Kontrola podstawy operacyjnej przeciwnika
+                <input type="checkbox" id="checkbox_AWrogaPodstawa" name="checkbox_AWrogaPodstawa">
+            </label><br /><br />
+
+            <label class="checkbox_punkty">
+                Rozbicie morale przeciwnika
+                <input type="checkbox" id="checkbox_ARozbicieMorale" name="checkbox_ARozbicieMorale">
+            </label>
+
+            <h3>Pozostałe zdobyte punkty: <span id="wyswietl_ATaktykaArmii" class="wyswietlane_wartosci"></span></h3>
+            <label class="checkbox_punkty">
+                Zniszczone balony przeciwnika
+                <input type="checkbox" id="checkbox_AZniszczoneBalony" name="checkbox_AZniszczoneBalony">
+            </label><br /><br />
+
+            <h3>Dodatkowe punkty zdobyte/stracone wynikające z zasad specjalnych nie ujętych wyżej: <span id="wyswietl_ADodatkowePunkty" class="wyswietlane_wartosci"></span></h3>
+            <p><input type="range" min="-20" max="20" value="0" class="slider" id="slider_ADodatkowePunkty"></p>
+        </div>
+    </section>
+
+    <!-- Wprowadzanie danych Gracza B -->
+    <section class="ramka_gracza_B">
+
+        <h1> Gracz B</h1>
+
+        <div>
+
+            <h3>Ilość wystawionych jednostek: <span id="wyswietl_BIloscJednostek" class="wyswietlane_wartosci"></span></h3>
+            <p><input type="range" min="1" max="50" value="25" class="slider" id="slider_BIloscJednostek"></p>
+
+            <h3>Ilość straconych jednostek: <span id="wyswietl_BIloscStraconychJednostek" class="wyswietlane_wartosci"></span></h3>
+            <p><input type="range" min="0" max="50" value="0" class="slider" id="slider_BIloscStraconychJednostek"></p>
+
+
+            <h3>Ilość Twoich jednostek odpechniętych poza pole bitwy: <span id="wyswietl_BIloscOdpechnietychJednostek" class="wyswietlane_wartosci"></span></h3>
+            <p><input type="range" min="0" max="50" value="0" class="slider" id="slider_BIloscOdpechnietychJednostek"></p>
+
+            <h3>Ilość zdobytych punktów strategicznych: <span id="wyswietl_BIloscZdobytychPunktowStrategicznych" class="wyswietlane_wartosci"></span></h3>
+            <p><input type="range" min="0" max="5" value="0" class="slider" id="slider_BIloscZdobytychPunktowStrategicznych"></p>
+
+            <h3>Wybrana taktyka Armii: <span id="wyswietl_BTaktykaArmii" class="wyswietlane_wartosci"></span></h3>
+            <label class="radio_punkty">
+                Ostrożna
+                <input type="radio" checked="checked" name="radio_BTaktykaArmii" value="Ostrozna">
+            </label>
+            <label class="radio_punkty">
+                Neutralna
+                <input type="radio" name="radio_BTaktykaArmii" value="Neutralna">
+            </label>
+            <label class="radio_punkty">
+                Agresywna
+                <input type="radio" name="radio_BTaktykaArmii" value="Agresywna">
+            </label>
+
+            <h3>Osiągnięte cele: <span id="wyswietl_BTaktykaArmii" class="wyswietlane_wartosci"></span></h3>
+            <label class="checkbox_punkty">
+                Kontrola własnej podstawy operacyjnej
+                <input type="checkbox" id="checkbox_BWlasnaPodstawa" name="checkbox_BWlasnaPodstawa">
+            </label><br /><br />
+
+            <label class="checkbox_punkty">
+                Kontrola podstawy operacyjnej przeciwnika
+                <input type="checkbox" id="checkbox_BWrogaPodstawa" name="checkbox_BWrogaPodstawa">
+            </label><br /><br />
+
+            <label class="checkbox_punkty">
+                Rozbicie morale przeciwnika
+                <input type="checkbox" id="checkbox_BRozbicieMorale" name="checkbox_BRozbicieMorale">
+            </label>
+
+            <h3>Pozostałe zdobyte punkty: <span id="wyswietl_ATaktykaArmii" class="wyswietlane_wartosci"></span></h3>
+            <label class="checkbox_punkty">
+                Zniszczone balony przeciwnika
+                <input type="checkbox" id="checkbox_BZniszczoneBalony" name="checkbox_BZniszczoneBalony">
+            </label><br /><br />
+
+            <h3>Dodatkowe punkty zdobyte/stracone wynikające z zasad specjalnych nie ujętych wyżej: <span id="wyswietl_BDodatkowePunkty" class="wyswietlane_wartosci"></span></h3>
+            <p><input type="range" min="-20" max="20" value="0" class="slider" id="slider_BDodatkowePunkty"></p>
+        </div>
+
+    </section>
+    <div class="sekcja_przycisku">
+        <input class="przycisk_przeliczenia" type="button" onclick="wyswietlWartosci()" value="PRZELICZ WYNIK" />
+    </div>
+
+   
+    
+    <!-- wyświetlenie wyników -->
+    <section class="ramka_wyniki">
+        <h1> Wyniki bitwy</h1>
+        <table style="width:100%" class="tabela_wynikow">
+            <tr class="tabela_wiersz_tytulowy">
+                <th style="width:20%">Gracz A</th>
+                <th style="width:60%">Punktacja</th>
+                <th style="width:20%">Gracz B</th>
+            </tr>
+            <tr class="tabela_wiersz_komentarz">
+                <td id="tabAOpisTaktyki"></td>
+                <td></td>
+                <td id="tabBOpisTaktyki"></td>
+            </tr>
+            <tr class="tabela_wiersz">
+                <td id="tabAWynikCele"></td>
+                <td>Realizacja celów</td>
+                <td id="tabBWynikCele"></td>
+            </tr>
+            <tr class="tabela_wiersz">
+                <td id="tabAWynikZniszczone"></td>
+                <td>Zniszczone jednostki</td>
+                <td id="tabBWynikZniszczone"></td>
+            </tr>
+            <tr class="tabela_wiersz">
+                <td id="tabAWynikOdepchniete"></td>
+                <td>Jednostki wypchnięte </td>
+                <td id="tabBWynikOdepchniete"></td>
+            </tr>
+            <tr class="tabela_wiersz">
+                <td id="tabAWynikBalony"></td>
+                <td>Zniszczone balony</td>
+                <td id="tabBWynikBalony"></td>
+            </tr>
+            <tr class="tabela_wiersz">
+                <td id="tabAWynikNizszeStraty"></td>
+                <td>Mniejsze straty</td>
+                <td id="tabBWynikNizszeStraty"></td>
+            </tr>
+            <tr class="tabela_wiersz">
+                <td id="tabAWynikInne"></td>
+                <td>Inne</td>
+                <td id="tabBWynikInne"></td>
+            </tr>
+            <tr class="tabela_wiersz_suma">
+                <td id="tabAWynik"></td>
+                <td>RAZEM</td>
+                <td id="tabBWynik"></td>
+            </tr>
+        </table>
+        <div class="wynik_bitwy_opisowy" id="wyswietlWynikBitwyOpisowy"></div>
+    </section>
+
+
+    <!-- Skrypt JS -->
+    <script src="skrypty/skrypty.js" defer></script>
+
+    <!--stopka-->
+    <footer id="stopka">
+        opracowanie: Marcin Szymankiewicz, 2022 v1.0
+    </footer>
+</body>
+</html>
